@@ -25,7 +25,11 @@ export class ConsoleDriver implements LoggerDriverInterface {
         messageLogged,
         message.timestamp.toISOString(),
       );
-    this._methods.get(message.level)!(messageLogged, ...message.extras);
+    if (message.extras.length > 0) {
+      this._methods.get(message.level)!(messageLogged, ...message.extras);
+    } else {
+      this._methods.get(message.level)!(messageLogged);
+    }
   }
 
   private _prepend(
