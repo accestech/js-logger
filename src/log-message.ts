@@ -5,7 +5,7 @@ export class LogMessage {
   private _text: string;
   private _tag?: string;
   private _timestamp: Date;
-  private _extra: Array<any>;
+  private _extra: any;
 
   public constructor(
     level: LogLevel,

@@ -18,7 +18,7 @@ class Logger {
   }
 
   private _buildMessage(level: LogLevel, message: string, ...extras: any) {
-    return new LogMessage(level, message, this._tag, extras);
+    return new LogMessage(level, message, this._tag, ...extras);
   }
 
   private _writeLog(message: LogMessage) {
