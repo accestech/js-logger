@@ -1,6 +1,6 @@
 {
   "name": "@accestech/loghelper",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Log helper",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -15,12 +15,11 @@
     "build": "rm -rf dist && rollup -c",
     "dev": "rm -rf dist && rollup -c -w",
     "lint": "prettier --write .",
-    "release": "standard-version --sign",
+    "release": "standard-version",
     "test": "yarn run test:unit && yarn run test:functional",
     "test:unit": "jest test/unit",
     "test:coverage": "jest test/unit --coverage",
     "test:functional": "jest test/functional",
-    "test:keys": "jest test/functional -t 'Unupgraded Command Successful'",
     "prepare": "husky install"
   },
   "lint-staged": {
